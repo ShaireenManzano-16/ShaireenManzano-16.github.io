@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaireen Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      .project-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.project-image {
+    width: 100%;
+    height: auto; /* Ensures the aspect ratio is maintained */
+    object-fit: cover; /* Keeps the image fully visible */
+}
+
+.project-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.project-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project-buttons {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .project-card {
+        margin-bottom: 20px;
+    }
+    
+    .project-content {
+        text-align: left; /* Adjust for better alignment on smaller screens */
+    }
+}
+
+.icon-container img {
+    width: 50px; /* Set a consistent width */
+    height: 50px; /* Set a consistent height */
+    object-fit: contain; /* Ensures the image scales properly without distortion */
+    margin: 5px; /* Adds spacing between icons */
+}
+
+
+.about-me-content p {
+    text-align: justify; /* Justify the text */
+}
+
+#skills .container-lg {
+    max-width: 1200px; /* Set max width for larger screens */
+    padding: 0 15px; /* Ensure spacing on small screens */
+}
+#skills .expertise-box {
+    border: 1px solid #ddd; /* Optional: add border */
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Optional: add a light background */
+    transition: transform 0.2s ease; /* Hover effect */
+}
+#skills .expertise-box:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+}
+
+
+.modal-header.bg-success {
+    background-color: #28a745;
+    border-bottom: none;
+}
+
+.modal-header.bg-danger {
+    background-color: #dc3545;
+    border-bottom: none;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-footer .btn {
+    width: 100px;
+    font-weight: bold;
+}
+
+        </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"> <div class="container">
+        <a class="navbar-brand text-danger fw-bold" href="#">
+            SHAIREEN <span class="text-white">PORTFOLIO</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About me</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#trainings">Trainings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-outline-danger ms-2" href="#contact">Contact Me</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="home" style="padding-top:70px; position: relative;">
+    <!-- Add a semi-transparent overlay -->
+    <div style="background-image: url('Port icons/is_web_development_good_career.avif'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat; 
+                position: absolute; 
+                top: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 100%; 
+                opacity: 0.10; 
+                z-index: 1;">
+    </div>
+    <div class="container py-5" style="position: relative; z-index: 2;">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-md-start text-center">
+                <h4 class="animated-text" style="animation-delay: 0.2s; color: #ffff; font-weight: bold;">Hello, I am Shaireen</h4>
+                <h1 class="animated-text" style="animation-delay: 0.4s; color: #ffff; font-weight: bold;">I’m a <span class="text-danger">Junior Web Developer</span></h1>
+                <p class="animated-text" style="animation-delay: 0.6s; color: #ffff; font-weight: bold;">Business Analyst and System Analyst</p>
+                <a href="https://drive.google.com/file/d/1cvD6X6t9szsEsrWDf4ea80ejzoNdOxib/view?usp=drive_link" class="btn btn-danger btn-lg rounded-pill animated-button" style="animation-delay: 0.8s; font-weight: bold;">Download Resume</a>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="IMG_20240626_161721.jpg" alt="Profile Picture" class="profile-img animated-img">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<style>
+    /* Image Animation */
+    .animated-img {
+        animation: fadeInZoom 2s ease-in-out;
+        transform-origin: center;
+    }
+
+    /* Keyframes for fadeInZoom */
+    @keyframes fadeInZoom {
+        0% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+</style>
+
+
+
+<section id="skills" class="py-5">
+    <div class="expertise-container">
+        <div class="container-lg"> <!-- Use container-lg for responsive max-width -->
+            <h2 class="text-center mb-4">My Expertise</h2>
+            <div class="row text-center gy-4">
+                <div class="col-sm-6 col-lg-4">
+                    <div class="expertise-box p-3">
+                        <h3>Frontend Tools</h3>
+                        <div class="icon-container d-flex flex-wrap justify-content-center gap-2 mt-3">
+                            <img src="Port icons/download (3).jpg" alt="HTML" width="50">
+                            <img src="Port icons/images.jpg" alt="CSS" width="50">
+                            <img src="Port icons/download.jpg" alt="BOOTSTRAP" width="50">
+                            <img src="Port icons/download.png" alt="JS" width="50">
+                            <img src="Port icons/images (1).jpg" alt="JQUERY" width="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="expertise-box p-3">
+                        <h3>Backend Tools</h3>
+                        <div class="icon-container d-flex flex-wrap justify-content-center gap-2 mt-3">
+                            <img src="Port icons/avo0m3opl.webp" alt="AJAX" width="50">
+                            <img src="Port icons/php-icon-2048x2048-zjxns1zh.png" alt="PHP" width="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="expertise-box p-3">
+                        <h3>Database</h3>
+                        <div class="icon-container d-flex justify-content-center mt-3">
+                            <img src="Port icons/xampp_94513.png" alt="MySQL" width="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="expertise-box p-3">
+                        <h3>Domain and Hosting</h3>
+                        <div class="icon-container d-flex flex-wrap justify-content-center gap-2 mt-3">
+                            <img src="Port icons/download (1).png" alt="Hostinger" width="50">
+                            <img src="Port icons/download (1).jpg" alt="Award Space" width="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="expertise-box p-3">
+                        <h3>Web Design Tools</h3>
+                        <div class="icon-container d-flex justify-content-center mt-3">
+                            <img src="Port icons/apps-figma-icon-2048x2048-ctjj5ab7.png" alt="Figma" width="50">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-4">
+                    <div class="expertise-box p-3">
+                        <h3>Other Tools</h3>
+                        <div class="icon-container d-flex flex-wrap justify-content-center gap-2 mt-3">
+                            <img src="Port icons/WSuAcyz1u8MoF8cokXspkmOIn8oWXaE8JH-SGXbUUW0.png" alt="Visual Studio" width="50">
+                            <img src="Port icons/git-logo.png" alt="Git" width="50">
+                            <img src="Port icons/GitHub-logo(1).png" alt="GitHub" width="50">
+                            <img src="Port icons/1485231.png" alt="API" width="50">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <section id="about">
+    <section class="about-me-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-center">
+                    <img src="1B4A6582.jpg" alt="About Me Image" class="profile-img-about">
+                </div>
+                <div class="col-md-7 about-me-content">
+                    <h2>About Me</h2>
+                    <p>I recently graduated with a Bachelor of Science in Information Technology from Forbes College. Despite being a fresh graduate, I possess extensive knowledge and skills in understanding business analyst documentation, user flow, and translating user flow into wireframes and prototypes using Figma, as demonstrated during my capstone project and on-the-job training.</p>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#aboutMeModal">
+                        Read More
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="aboutMeModal" tabindex="-1" aria-labelledby="aboutMeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-lg"> <!-- Added modal-lg for a larger modal -->
+            <div class="modal-content shadow-lg rounded">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title" id="aboutMeModalLabel">About Me</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p class="mb-4">
+                        I recently graduated with a <strong>Bachelor of Science in Information Technology</strong> from Forbes College. Despite being a fresh graduate, I possess extensive knowledge and skills in understanding business analyst documentation, user flow, and translating user flow into wireframes and prototypes using Figma, as demonstrated during my capstone project and on-the-job training.
+                    </p>
+                    <p class="mb-4">
+                        Additionally, I am proficient in programming web systems with expertise in <strong>HTML, CSS, JavaScript, PHP, APIs</strong>, and database management using <strong>MySQL</strong> and <strong>XAMPP</strong>. I have basic knowledge in troubleshooting hardware and software issues, which I gained during my work immersion days at the DSWD Region V Office.
+                    </p>
+                    <p class="mb-4">
+                        During my college days, I served as an academic server, gaining valuable experience in managing tasks. I also developed various web systems for clients, including hotel reservation systems and webpages. 
+                    </p>
+                    <p>
+                        I have work experience as a <strong>Junior Web Developer</strong> under the Product Development Group of Myracle Innovation Inc. I developed two websites: the <strong>Kinetic website</strong> and the <strong>Primavisio website</strong>. The languages and technologies I used include <strong>HTML, CSS, Bootstrap, JavaScript, jQuery, AJAX, PHP</strong>, and <strong>MySQL</strong> (using XAMPP).
+                    </p>
+                </div>
+                <div class="modal-footer bg-light">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<section id="projects">
+    <section class="project-section">
+        <div class="container">
+            <h2 class="text-center">My Portfolio</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <img src="Screenshot (184).png" alt="Project 1" class="project-image">
+                        <div class="project-content">
+                            <div>
+                                <h3 class="project-title">WIREFRAMES AND PROTOTYPE DURING MY CAPSTONE PROJECT USING FIGMA
+                                </h3>
+                                <p>ONLINE SCHEDULING AND PLOTTING SYSTEM OF FORDES COLLEGE</p>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="https://www.figma.com/proto/wEAjWXyj406cDPEiDVDbnM/Forbes-Scheduling-Prototype?node-id=781-9746&starting-point-node-id=781%3A9746&scaling=contain&content-scaling=fixed" class="btn btn-danger">VISIT LINK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <img src="screenshot-1735130263062.png" alt="Project 2" class="project-image">
+                        <div class="project-content">
+                            <div>
+                                    <br>
+                                <h3 class="project-title">DYNAMIC WEB APP FOR PRIMAVISIO USING HTML, CSS, BOOTSTRAP, JAVASCRIPT,JQUERY, AJAX FOR CLIENT SIDE, AND PHP FOR SERVER SIDE AND MYSQL DATABASE XAMPP</h3>
+                                <p>PRIMAVISIO WEBSITE WITH EMAIL NOTICATION</p>
+                            </div>
+                            <div class="project-buttons">
+                                <!-- <a href="https://primavisioph.com/" class="btn btn-danger">VISIT LINK</a> -->
+                                <a href="demoprojects/primavisio.mp4" class="btn btn-danger">VIEW DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <img src="screenshot-1735041592432.png" alt="Project 3" class="project-image">
+                        <div class="project-content">
+                            <div>
+                                <h3 class="project-title">MINI PROJECT WEB APP WITH GOOGLE API USING HTML CSS JAVASCRIPT, PHP AND DATABASE MYSQL XAMPP</h3>
+                                <p>WEB APP PROJECT</p>
+                            </div>
+                            <div class="project-buttons">
+                               <a href="demoprojects/googleapi.mp4" class="btn btn-danger">VIEW DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <img src="screenshot-1735042203335.png" alt="Project 3" class="project-image">
+                        <div class="project-content">
+                            <div>
+                                <h3 class="project-title">LTAS SYSTEM WITH EMAIL NOTIFICATION USING HTML CSS JAVASCRIPT, PHP AND DATABASE MYSQL XAMPP</h3>
+                                <p>LTAS SYSTEM WITH EMAIL OTP NOTIFICATION</p>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="#" class="btn btn-danger">VISIT LINK</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <img src="screenshot-1735042782483.png" alt="Project 3" class="project-image">
+                        <div class="project-content">
+                            <div>
+                                <h3 class="project-title">WEB PAGE LANDING PAGE FOR MY LOCAL CLIENT USING HTML, CSS AND JAVASCRIPT</h3>
+                                <p>LANDING PAGE</p>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="demoprojects/miniwebsite.mp4" class="btn btn-danger">VIEW DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="project-card">
+                        <img src="screenshot-1735040121154.png" alt="Project 4" class="project-image">
+                        <div class="project-content">
+                            <div>
+                                <h3 class="project-title">HTML,CSS,BOOTSTRAP,JAVASCRIPT,JQUERY, AJAX, PHP AND MYSQL DATABASE XAMPP</h3>
+                                <p>KINETIC WEBSITE WITH EMAIL NOTIFICATION</p>
+                            </div>
+                            <div class="project-buttons">
+                                <a href="demoprojects/kinetic.mp4" class="btn btn-danger">VIEW DEMO</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+<section id="trainings">
+    <section class="trainings-section">
+        <div class="container">
+            <h2 class="text-center">Trainings</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="training-card">
+                        <img src="Trainings/certificate.Frontend Fundamentals Bootcamp_Shaireen .png" alt="Training 1" class="training-image">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-card">
+                        <img src="Trainings/certificate.Data Analytics Fundamentals_Shaireen .png" alt="Training 2" class="training-image">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="training-card">
+                        <img src="Trainings/Screenshot_20241224_203006.jpg" alt="Training 3" class="training-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+
+    <section class="feedback-section py-5" style="background-color: #000;">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white">Client's Feedback</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feedback-card p-4 shadow-sm rounded bg-dark text-white">
+                        <div class="feedback-header d-flex align-items-center mb-3">
+                            <div class="feedback-avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; font-size: 1.5rem;">W</div>
+                            <div>
+                                <div class="feedback-name fw-bold text-white fs-5">Wiz Acad</div>
+                                <div class="feedback-project text-muted">Figma Project</div>
+                            </div>
+                        </div>
+                        <div class="feedback-text">
+                            <p class="text-light">Thank you so much for the smooth transaction and accepting the commission within the budget. My request got followed and you are consistent when it comes to progress. I will surely come back.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feedback-card p-4 shadow-sm rounded bg-dark text-white">
+                        <div class="feedback-header d-flex align-items-center mb-3">
+                            <div class="feedback-avatar bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 50px; height: 50px; font-size: 1.5rem;">D</div>
+                            <div>
+                                <div class="feedback-name fw-bold text-white fs-5">Dino Barrera</div>
+                                <div class="feedback-project text-muted">Capstone Project</div>
+                            </div>
+                        </div>
+                        <div class="feedback-text">
+                            <p class="text-light">Thank you so much for your excellent work. Our system has been approved, and we appreciate your dedication and effort throughout the project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact">
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Any questions? Write your inquiries here.</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 contact-image">
+                        <img src="Trainings/80b4c8eca5291255732a9d4e3eeb8826.gif" alt="Mail Icon" width="400">
+                    </div>
+                    <div class="col-md-6">
+                        <form id="contactForm" action="https://formspree.io/f/xeooprrk" method="POST">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Your name" required>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Email Address" required>
+                            <textarea name="message" class="form-control" id="message" placeholder="Message" rows="5" required></textarea>
+                            <button type="submit" class="btn-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Success Modal -->
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title" id="successModalLabel"><i class="fas fa-check-circle"></i> Inquiry Submitted</h5>
+                            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <p class="mb-0" style="color: black;">Thank you for reaching out! Your inquiry has been successfully submitted. We will get back to you shortly.</p>
+                        </div>
+                        <div class="modal-footer justify-content-center">
+                            <button type="button" class="btn btn-success" onclick="redirectToIndex()">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title" id="errorModalLabel"><i class="fas fa-times-circle"></i> Submission Failed</h5>
+                <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <p class="mb-0">Oops! There was an issue submitting your inquiry. Please try again later.</p>
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        </section>
+    </section>
+    
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="footer-left">
+                        <h4 style="color:red">SHAIREEN MANZANO</h4>
+                        <p>Bicol, Tagalog, English</p>
+                        <p>Albay, Philippines</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-right">
+                        <h4>Contact me</h4>
+                        <div class="social-icons">
+                            <!-- <a href="#" target="_blank"><img src="twitter.png" alt="Twitter" width="20"></a> -->
+                            <a href="https://www.linkedin.com/in/shairen-manzano-933114316" target="_blank"><img src="Trainings/download (2).png" alt="LinkedIn" width="20"></a>
+                            <a href="https://www.facebook.com/shaireen.manzano" target="_blank"><img src="Trainings/download.png" alt="Facebook" width="20"></a>
+                            <a href="https://www.instagram.com/shaireenmanzano16/profilecard/?igsh=MWphaml1OHdqZmw2MQ==" target="_blank"><img src="Trainings/download (2).jpg" alt="Instagram" width="20"></a>
+                            <a href="https://www.tiktok.com/@shang.dev?_t=ZS-8spaxUVKMYk&_r=1" target="_blank"><img src="Trainings/tiktok.png" alt="Facebook" width="20"></a>
+                            <a href="https://join.skype.com/invite/qAHbOdN1adHS" target="_blank"><img src="Trainings/skype.png" alt="Facebook" width="20"></a>
+                        </div>
+                        <p>Viber or Whatsapp: +639517026141</p>
+                        <p>shaireenmanzano8@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Shaireen Portfolio All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+
+        document.getElementById("contactForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const form = event.target;
+            fetch(form.action, {
+                method: form.method,
+                body: new FormData(form),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    $('#successModal').modal('show'); 
+                    form.reset(); 
+                } else {
+                    $('#errorModal').modal('show'); 
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error); 
+                $('#errorModal').modal('show'); 
+            });
+        });
+
+
+        function redirectToIndex() {
+    $('#successModal').modal('hide');
+    window.location.href = 'index.html';
+}
+
+
+
+    </script>
+</body>
+</html>
